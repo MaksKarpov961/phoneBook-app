@@ -38,8 +38,187 @@
 
 .button_delete {
   cursor: pointer;
+  background-color: #f44336;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .button_edit {
   cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Modal.module.css */
+
+/* Стиль для фону модалки */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75); /* Напівпрозорий чорний фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+/* Стиль для вмісту модалки */
+.modalContent {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px; /* Ширина модалки */
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out; /* Додаємо анімацію відкриття */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formModal {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+/* Анімація для модалки */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Стиль для інпутів */
+.input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Стиль для кнопок */
+.btn_submite {
+  padding: 5px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn_submite:hover {
+  background-color: #45a049;
+}
+
+.btn_submite:focus {
+  outline: none;
+}
+
+/* Стиль для скасування */
+.btn_submite:last-child {
+  background-color: #f44336;
+}
+
+.btn_submite:last-child:hover {
+  background-color: #e53935;
+}
+
+.form {
+  margin-top: 25px;
+  border: solid 2px black;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 300px;
+  gap: 15px;
+  border-radius: 5px;
+}
+
+.label_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.33;
+  letter-spacing: 0.01em;
+  color: black;
+}
+.input {
+  text-align: center;
+  outline: none;
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-radius: 5px;
+  border: solid 2px black;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.33;
+  letter-spacing: 0.01em;
+  color: black;
+}
+.input::placeholder {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.33;
+  letter-spacing: 0.01em;
+  color: rgba(0, 0, 0, 0.226);
+}
+
+.input:focus {
+  border: solid 2px green;
+}
+
+.btn_submite {
+  cursor: pointer;
+  height: 40px;
+
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.33;
+  letter-spacing: 0.01em;
+  color: black;
+}
+
+.errprMessage {
+  color: red;
 }
