@@ -1,0 +1,45 @@
+.wrapperContact {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 330px;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapperdescr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.descr {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.descr_text {
+  font-size: 20px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button_delete {
+  cursor: pointer;
+}
+
+.button_edit {
+  cursor: pointer;
+}
