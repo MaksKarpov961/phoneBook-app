@@ -30,8 +30,12 @@ const contactSlice = createSlice({
           (item) => item.id !== action.payload
         );
       })
-      .addCase(editContacts.fulfilled, (state, action) => {
-        state.contacts.items = action.payload;
+      .addCase(editContacts.fulfilled, (state, { payload }) => {
+        const item = state.contacts.items.find(
+          (item) => item.id === payload.id
+        );
+        item.name = payload.name;
+        item.number = payload.number;
       });
   },
 });

@@ -49,8 +49,8 @@ const Contact = ({ name, number, id }) => {
       name: values.name,
       number: values.number,
     };
-    console.log(updatedContact); // перевірте, чи коректно передається ID
-    dispatch(editContacts(updatedContact)); // передаємо весь об'єкт
+
+    dispatch(editContacts(updatedContact));
     closeModal();
     actions.resetForm();
   };
