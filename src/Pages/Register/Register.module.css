@@ -1,7 +1,12 @@
 .img {
   position: absolute;
-  top: 5px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 300px;
+}
+.title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
 }

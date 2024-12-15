@@ -5,6 +5,7 @@ import s from "./Login.module.css";
 const Login = () => {
   return (
     <div>
+      <h1 className={s.title}>Welcome to Phonebook </h1>
       <img className={s.img} src={phoneImage} alt="Phone" />
       <LoginForm />
     </div>
