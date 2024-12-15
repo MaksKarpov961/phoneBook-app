@@ -4,8 +4,15 @@ import Layout from "../Layout";
 import HomePage from "../../Pages/HomePage/HomePage";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { refreshUser } from "../../redux/auth/operations";
 
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
