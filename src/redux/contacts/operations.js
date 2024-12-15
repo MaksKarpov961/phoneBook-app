@@ -28,8 +28,11 @@ export const addContacts = createAsyncThunk(
 export const editContacts = createAsyncThunk(
   "contacts/editContacts",
   async (body, thunkAPI) => {
+    const id = body.id;
+    const contact = { name: body.name, number: body.number };
+
     try {
-      const { data } = await goitApi.patch(`/contacts/${body.id}`, body);
+      const { data } = await goitApi.patch(`/contacts/${id}`, contact);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
