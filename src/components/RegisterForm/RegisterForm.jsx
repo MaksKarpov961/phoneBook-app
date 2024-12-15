@@ -13,7 +13,7 @@ const RegisterForm = () => {
       .unwrap()
       .then((res) => {
         toast(`Welcome ${res?.user?.name}`);
-        navigete("/contacts");
+        navigete("/");
       })
       .catch(() => toast.error("Failed to register!"));
     options.resetForm();

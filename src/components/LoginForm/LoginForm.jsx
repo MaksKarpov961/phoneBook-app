@@ -13,7 +13,7 @@ const LoginForm = () => {
       .unwrap()
       .then((res) => {
         toast(`Welcome ${res?.user?.name}`);
-        navigete("/contacts");
+        navigete("/");
       })
       .catch(() => toast.error("Failed to Login!"));
     options.resetForm();

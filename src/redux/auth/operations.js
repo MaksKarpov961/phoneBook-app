@@ -59,7 +59,8 @@ export const refreshUser = createAsyncThunk(
 
     try {
       setAuthHeader(savedToken);
-      await goitApi.get("/users/current/");
+      const { data } = await goitApi.get("/users/current/");
+      return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }
