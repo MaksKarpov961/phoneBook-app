@@ -5,6 +5,7 @@ import {
   editContacts,
   fetchContacts,
 } from "./operations";
+import { logout } from "../auth/operations";
 
 const initialState = {
   contacts: {
@@ -36,7 +37,8 @@ const contactSlice = createSlice({
         );
         item.name = payload.name;
         item.number = payload.number;
-      });
+      })
+      .addCase(logout.fulfilled, () => initialState);
   },
 });
 
