@@ -12,7 +12,7 @@ const LoginForm = () => {
     dispatch(login(values))
       .unwrap()
       .then((res) => {
-        toast(`Welcome ${res?.user?.name}`);
+        toast.success(`Welcome ${res?.user?.name}`);
         navigete("/");
       })
       .catch(() => toast.error("Failed to Login!"));
@@ -30,9 +30,12 @@ const LoginForm = () => {
         <Form className={s.form}>
           <Field name="email" placeholder="Enter email" />
           <Field name="password" type="password" placeholder="Enter pass" />
-          <button type="submit">Login</button>
+          <button className={s.btnLoggin} type="submit">
+            Login
+          </button>
           <p className={s.descr}>or</p>
           <button
+            className={s.btnLink}
             type="button"
             onClick={() => {
               navigete("/register");

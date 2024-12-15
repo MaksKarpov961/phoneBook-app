@@ -31,9 +31,12 @@ const RegisterForm = () => {
           <Field name="name" placeholder="Enter name" />
           <Field name="email" placeholder="Enter email" />
           <Field name="password" type="password" placeholder="Enter pass" />
-          <button type="submit">Register</button>
+          <button className={s.btnLoggin} type="submit">
+            Register
+          </button>
           <p className={s.descr}>or</p>
           <button
+            className={s.btnLink}
             type="button"
             onClick={() => {
               navigete("/login");

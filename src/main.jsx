@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")).render(
         <PersistGate loading={null} persistor={persistor}>
           <App />
           <Toaster
-            position="top-right"
+            position="top-center"
             reverseOrder={false}
             toastOptions={{
               duration: 2000,

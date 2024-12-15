@@ -42,7 +42,7 @@
   border: none;
   border-radius: 5px;
   padding: 5px;
-
+  transition: background-color linear 250ms;
   &:hover {
     background-color: #fa796f;
   }
@@ -54,6 +54,7 @@
   border: none;
   border-radius: 5px;
   padding: 5px;
+  transition: background-color linear 250ms;
   &:hover {
     background-color: #0730a1;
   }
@@ -224,6 +225,7 @@
   line-height: 1.33;
   letter-spacing: 0.01em;
   color: black;
+  transition: background-color linear 250ms;
 }
 
 .errprMessage {

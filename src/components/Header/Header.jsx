@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { selectIsLoggedIn, selectUser } from "../../redux/auth/selectors";
 import { logout } from "../../redux/auth/operations";
+import s from "./Header.module.css";
 
 const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -13,9 +14,17 @@ const Header = () => {
     navigete("/login");
   };
   return (
-    <header>
-      {isLoggedIn && <h2>Welcome: {user.name}</h2>}
-      {isLoggedIn && <button onClick={logoutClick}>Logout</button>}
+    <header className={s.header}>
+      {isLoggedIn && (
+        <h2 className={s.title}>
+          Welcome: <span>{user.name}</span>
+        </h2>
+      )}
+      {isLoggedIn && (
+        <button className={s.button} onClick={logoutClick}>
+          Logout
+        </button>
+      )}
     </header>
   );
 };
