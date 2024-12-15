@@ -28,8 +28,13 @@ const LoginForm = () => {
       <h2>Login</h2>
       <Formik onSubmit={handleSubmit} initialValues={initialValues}>
         <Form className={s.form}>
-          <Field name="email" placeholder="Enter email" />
-          <Field name="password" type="password" placeholder="Enter pass" />
+          <Field required name="email" placeholder="Enter email" />
+          <Field
+            required
+            name="password"
+            type="password"
+            placeholder="Enter pass"
+          />
           <button className={s.btnLoggin} type="submit">
             Login
           </button>
