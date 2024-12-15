@@ -42,14 +42,21 @@
   border: none;
   border-radius: 5px;
   padding: 5px;
+
+  &:hover {
+    background-color: #fa796f;
+  }
 }
 
 .button_edit {
   cursor: pointer;
-  background-color: #4caf50;
+  background-color: #3d6ff8;
   border: none;
   border-radius: 5px;
   padding: 5px;
+  &:hover {
+    background-color: #0730a1;
+  }
 }
 
 /* Modal.module.css */

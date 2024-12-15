@@ -65,6 +65,13 @@ const Contact = ({ name, number, id }) => {
     setIsModalOpen(false);
   };
 
+  const deleteContactClick = () => {
+    const approval = confirm("Confirm deletion?");
+    if (approval) {
+      dispatch(deleteContacts(id));
+    }
+  };
+
   return (
     <div className={s.wrapperContact}>
       <div className={s.wrapperdescr}>
@@ -79,7 +86,7 @@ const Contact = ({ name, number, id }) => {
       </div>
       <div className={s.buttonsWrapper}>
         <button
-          onClick={() => dispatch(deleteContacts(id))}
+          onClick={deleteContactClick}
           className={s.button_delete}
           type="button"
         >
